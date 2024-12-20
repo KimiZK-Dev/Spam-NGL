@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spam NGL - KimiZK</title>
+		<link
+			rel="icon"
+			href="https://scontent.fhph1-2.fna.fbcdn.net/v/t39.30808-1/469867367_512960145109083_8162014150438288038_n.jpg?stp=cp0_dst-jpg_p40x40_tt6&_nc_cat=110&ccb=1-7&_nc_sid=111fe6&_nc_ohc=orbu5hHp08sQ7kNvgEAcTFp&_nc_oc=Adg42BsV2voRM4pcFsN0APXVzHqzx8pXqKad7skzPtEspVcgNuavCXGTPQnGbq00oen9_6J0limHDlfWEKanGc19&_nc_zt=24&_nc_ht=scontent.fhph1-2.fna&_nc_gid=A80asG8yJh1qduDxKbg_kJc&oh=00_AYBWm9V0qq_AZHdg2pWift7YZUVsXIhjh5U0nI59hJqeNQ&oe=676A10AC"
+			type="image/x-icon"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<!-- Modal -->
+		<div id="corsModal" class="modal fade" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Thông báo quan trọng</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<p class="m-0 fw-bold">
+							Để sử dụng công cụ, vui lòng cài đặt tiện ích
+						</p>
+						<a
+							href="https://chromewebstore.google.com/detail/moesif-origincors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=vi"
+							target="_blank"
+							class="author-link"
+						>
+							Moesif Origin & CORS Changer
+						</a>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn modal-btn"
+							data-bs-dismiss="modal"
+						>
+							Đã hiểu
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="form-container animate__animated animate__fadeIn">
+				<h1>CÔNG CỤ SPAM TIN NHẮN NGL</h1>
+				<p class="text-center mb-4">
+					Được tạo bởi:
+					<a href="https://fb.com/KimiZK.Oioioi" class="author-link"
+						>KimiZK</a
+					>
+				</p>
+
+				<form id="complimentForm">
+					<div class="mb-4">
+						<label for="username" class="form-label"
+							>Tên người dùng:</label
+						>
+						<input
+							type="text"
+							id="username"
+							class="form-control"
+							required
+							placeholder="Nhập username người nhận"
+						/>
+					</div>
+
+					<div class="mb-4">
+						<label class="form-label d-block">Chế độ spam:</label>
+						<div class="spam-options">
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									id="complimentMode"
+									value="compliment"
+								/>
+								<label
+									class="form-check-label"
+									for="complimentMode"
+								>
+									Spam lời khen
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									id="insultMode"
+									value="insult"
+								/>
+								<label
+									class="form-check-label"
+									for="insultMode"
+								>
+									Spam lời chửi
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									id="customMode"
+									value="custom"
+								/>
+								<label
+									class="form-check-label"
+									for="customMode"
+								>
+									Tùy chỉnh
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div id="messageInputContainer" class="mb-4">
+						<label for="singleMessage" class="form-label"
+							>Nội dung tin nhắn:</label
+						>
+						<textarea
+							id="singleMessage"
+							class="form-control"
+							rows="3"
+							placeholder="Nhập nội dung tin nhắn muốn spam"
+						></textarea>
+					</div>
+
+					<div
+						id="customMessageContainer"
+						class="mb-4"
+						style="display: none"
+					>
+						<label for="customMessages" class="form-label"
+							>Danh sách tin nhắn tùy chỉnh:</label
+						>
+						<textarea
+							id="customMessages"
+							class="form-control"
+							rows="4"
+							placeholder="Nhập mỗi tin nhắn trên một dòng"
+						></textarea>
+					</div>
+
+					<div class="mb-4">
+						<label for="sendCount" class="form-label"
+							>Số lượt gửi:</label
+						>
+						<input
+							type="number"
+							id="sendCount"
+							class="form-control"
+							min="1"
+							required
+							placeholder="Nhập số lượt muốn gửi"
+						/>
+					</div>
+
+					<button type="submit" class="btn btn-submit w-100">
+						Bắt đầu gửi tin nhắn
+					</button>
+				</form>
+
+				<div id="result" class="mt-4"></div>
+
+				<div id="sentCompliments" class="mt-4">
+					<label for="sentComplimentsTextarea" class="form-label">
+						Lịch sử gửi tin nhắn:
+					</label>
+					<textarea
+						id="sentComplimentsTextarea"
+						readonly
+						class="form-control"
+						placeholder="Các tin nhắn đã gửi sẽ hiển thị ở đây"
+					></textarea>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="module" src="js/api.js"></script>
+		<script type="module" src="js/main.js"></script>
+	</body>
+</html>
